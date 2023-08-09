@@ -116,3 +116,87 @@ To fix issues with switching site to different devices. These classes will be ap
 
 Can use Git Initialize button in VScode to automatically initialize your project 
 
+---
+
+Notes Wednesday 8/9:
+
+Bootstrap Notes
+
+Link b5 ABOVE link for style.css to link bootstrap to project. Take link from bootstrap and put it in link on project
+
+**MAKE SURE STYLE.CSS LINK COMES ***AFTER*** BOOTSTRAP LINK
+
+Note: control+shift+ ~ open terminal shortcut
+
+Can find all of bootstrap files in source on inspect
+
+
+body data-bs-theme="dark"
+- this gives dark theme from BS, this theme and other themes are found in source
+
+Use class="container" or class="container-fluid"
+
+Make class rows "sections", and columns buttons, divs, p tags
+
+- rows are display: flex by default
+
+- rows broken up into 12 parts
+
+  -rows have to exist inside a container
+
+To create mobile responsiveness, you can create your columns over different segments, ex col12 col-md-6 col-lg-4
+
+- you should always have a base col size with no infix, ex above is our col12
+
+section.row is a shortcut to make a section with class row
+
+.col-4 will make a div with a column of size 4
+
+section.row.bg-primary tab will do something like this as well, just shortcuts
+
+- can do *5 or something similar to multiple the number of shortcuts you make of the same type
+- automatically a div if you do not specify
+
+p-2 --> padding 2
+
+
+fw-bold --> font weight bold
+
+span is an inline element, creating classes inside a section of div or something like that
+
+mdi + tab will create link for mdi icons I think?
+
+then i + tab will make icon tag
+
+BS has built in btn class that's good for using with buttons
+
+***Have to apply justify-content to whatever is flexible or d-flex***
+
+- a row automatically inludes d-flex
+
+text-end will put text at the end (right) me thinks?
+
+**NOTE: all bootstrap is documented on their site. The most important part to learn from this is rows and columns
+
+offset-2 class: takes up 2/12 of our 12 row column to offset buttons or images or text
+
+ms-3 class: margin start 3, gives us a little margin
+
+ps-5 class: padding start 5, adds padding
+
+can consider an image as a background, so that we can put content on top of it
+
+pd-3 rounded: rounds boxessssssssss
+
+justify contents goes horizontally, align items goes vertically
+
+align-items-end moves box to bottom of container
+
+background-image: paste image url from wherever you get the picture from, background photo
+
+background-size: cover; lets the image just cover the page, sizes it properly
+
+can lower opacity on background colors to put them on top of a background image
+
+
+
