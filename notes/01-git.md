@@ -198,5 +198,20 @@ background-size: cover; lets the image just cover the page, sizes it properly
 
 can lower opacity on background colors to put them on top of a background image
 
+lorem comes up with random placeholder latin to fill out containers
+
+pe-0: padding end 0, if you want end size padding to be zero and have the container be flush with the end of the page
+
+img-fluid class: applies width 100% to image so it fits properly in your container
+- could also put w-50, makes width 50%
+
+Can add a STUB note that will mark what you need to add to your project/ description of work you need to do.
+
+object-fit: contain; makes an image fit and not go any larger than the size of the container that it's in
+
+Note: on the right sidebar on VScode, we have little dots that show where various anchors and notes are
+
+
+
 
 
