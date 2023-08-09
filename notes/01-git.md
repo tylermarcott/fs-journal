@@ -211,7 +211,30 @@ object-fit: contain; makes an image fit and not go any larger than the size of t
 
 Note: on the right sidebar on VScode, we have little dots that show where various anchors and notes are
 
+py-5: adds padding 5 to top AND bottom
 
+px-5: adds padding 5 to beginning and end
+
+object-fit: cover; crops the image to the size given
+
+g-5: allows you to add gap to your columns. Also has gx and gy
+
+can use padding in the same way as col, can have it be mobile adjustable, so when the screen gets smaller, take padding away. It looks like you can do this with a lot of different classes.
+
+in BS, you can reorder how your HTML is displayed in flex boxes
+
+-have to put the order on column class
+
+-order zero through 5
+
+default order is our mobile screen
+
+
+can put order 0-5, order 0 is first, order 5 is last and so on
+
+- also have to put in a line where the order will change just like col-md-6 sex, md being medium screen line
+
+to overwrite bootstrap, you can use customized classes and !important after the class
 
 
 
