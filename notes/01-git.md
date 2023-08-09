@@ -100,3 +100,19 @@ Font Awesome, MDI (material design icons) to add icons to the page. To get these
   - on MDI, it will give you a code snippet to add in to your code to create the icon
   - link.mdi:i code snippet starts your cursor on the icon, and starting to type something out, seems to have many different icons and you can select from one. MDI intellisense extension adds the little icon into your actual HTML code for clarity
   - icons are displayed as fonts, so you can change the color of them, and alter them in any other way that you would alter a font. Can change, size, color etc.
+
+To fix issues with switching site to different devices. These classes will be applied until the max width is reached
+// media rule
+
+@media (max-width: 600px){
+
+    .d-flex{
+
+      flex-direction: column;
+
+    }
+}
+
+
+Can use Git Initialize button in VScode to automatically initialize your project 
+
