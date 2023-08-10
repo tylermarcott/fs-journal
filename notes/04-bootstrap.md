@@ -151,3 +151,39 @@ Use the order property to reorder the frogs according to their lilypads.
 eg: order 2 on yellow will move yellow to the right
 
 Another property you can apply to individual items is align-self. This property accepts the same values as align-items and its value for the specific item.
+
+***code snippet to auto link BS: ----> link: b5***
+
+****creating a site is all about, rows, columns and boxes!!!!!!********
+
+
+Difference between container and container fluid
+
+
+container will put a little bit of spacing and margin, VS container fluid will got all across the page without any margin
+
+Mobile first design: design a web app first for mobile, then make it work for desktop, note the other way around. This is called mobile first design
+
+- when building out columns, throw in some dummy text
+
+BS breakpoints, check out this writeup to see page breakpoints used
+
+**style:debug** snippet adds borders for laying out an app. Make sure to add to body. Just used for building
+
+put comments in code to indicate sections. Can use SECTION anchor, this makes it easier to navigate HTML
+
+Note: don't just have floating text inside a div. Always wrap it in a p, header, bold tag, something like that.
+
+css-tricks.com: great resource for flex properties and whatnot, check it out, have a tab open for it lol
+
+Very useful to use devtools on browser to mess with heights and stuff. Like on a card, add width: 50vh (view height) to make the section o card larger
+
+- that's what I was trying to figure out about changing height. That's how you can change the size of various boxes on the app. Before I was using padding to change size. Can change width or height view height using the above syntax
+
+bg: shortcut for BS background colors
+
+Note: keyboard shortcut: cmd + d and up or down arrow allows you to highlight multiple items
+
+Note: p tags inherantly has margin. If you don't want this margin, make a css custom class targetting all p tags with margin: 0;
+
+***very important to be using devtools and highlight to figure out what is going on in our app**
