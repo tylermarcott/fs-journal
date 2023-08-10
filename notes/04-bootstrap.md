@@ -5,7 +5,7 @@ Notes Wednesday 8/9:
 Bootstrap Notes
 
 Link b5 ABOVE link for style.css to link bootstrap to project. Take link from bootstrap and put it in link on project
-
+link
 **MAKE SURE STYLE.CSS LINK COMES ***AFTER*** BOOTSTRAP LINK
 
 Note: control+shift+ ~ open terminal shortcut
@@ -184,6 +184,24 @@ bg: shortcut for BS background colors
 
 Note: keyboard shortcut: cmd + d and up or down arrow allows you to highlight multiple items
 
-Note: p tags inherantly has margin. If you don't want this margin, make a css custom class targetting all p tags with margin: 0;
+Note: p tags inherently has margin. If you don't want this margin, make a css custom class targeting all p tags with margin: 0;
 
 ***very important to be using devtools and highlight to figure out what is going on in our app**
+
+If you are making a class with the same name as a bootstrap class, have to apply the !important tag to your css class
+
+In CSS: you can put background-image: url(url here) to put a background image, as opposed to doing it in html
+
+To blur background: backdrop-filer: blur(pixel count)
+
+<!-- NOTE: important notes on position relative and position absolute -->
+
+position: relative; for parent element, position: absolute; for child element, this allows you to move elements around more freely, elative to certain containers in the app, instead of being limited to their own container
+
+***Media query***: on this size screen, apply one style of css, on another screens ize apply another size css
+
+d-none d-md-block classes were used to get rid of a hero card when switching to mobile
+
+sticky-top BS class, allows us to like make a header or nav bar stick to the top of your screen as you scroll down the page
+
+- sticks to the top of the thing above it
