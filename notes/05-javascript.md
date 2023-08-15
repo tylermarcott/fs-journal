@@ -81,3 +81,47 @@ can use //#region regionName and //#regionEnd or something like that to create a
 DOM: document object model
 
 use d-none and remove('d-none') for removing or revealing stuff in dom
+
+---------------
+
+***!SECTION: NOTES 8/15***
+
+NOTE: Mick put 4 col-6s in a single row instead of making 2 rows
+
+const creates a variable that is immutable (cannot be changed)
+
+***can create an array of objects!
+
+Easy to use an alias to access an array:
+- let animal = animal[i]
+
+
+animals.forEach() // this method only exists on arrays
+
+*anonymous/ no named function is a function that is called and destroyed/ not reusable
+- anonymous is a METHOD
+
+- animals.forEach((entity) => {
+    console.log(entity.name)
+    console.log(entity.name, entity.favoriteFood)
+    }
+  )
+
+
+  a predicate function is a callback function that has to return something
+
+
+filter method
+
+areas.forEach(area) =>  {
+  console.log(area)
+
+  animals.filter((animal => animal.currentArea == area)) // filter creates an array of elements that match the condition
+
+  let animalEmojis = inArea.map((animal) => animal.emoji + animal.name) // map creates an array of transformed results specified. Makes a copy of the array based on the transformations we apply
+
+  document.getElementById(area).innerText = animalEmojis.join(', ') // Join turns the elements in the array into a string, inserting ', ' in between them
+}
+
+
+
