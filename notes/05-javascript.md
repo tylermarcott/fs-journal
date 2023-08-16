@@ -124,4 +124,40 @@ areas.forEach(area) =>  {
 }
 
 
+animals.find(animals => animal.emoji == 'lobsteremoji')
+
+arrays can have objects, and said objects can have arrays within them too
+
+
+----------
+
+//SECTION - Notes Wed 8/16
+
+Note: the forEach loop is array specific, can't use it for more simple loops like you can with just a regular for loop
+
+*** don't forget there are span tags, Sam used them to create a kind of footer, price and name on a picture of a sandwich in the lecture project today
+
+try using px instead of % for border-radius, seems to give a better effect, I have been having issues lately with weird custom css borders lol
+
+//NOTE: single responsibility discipline: one function, one responsibility. If your function does more than one thing, abstract data out of that function and create another function.
+
+//NOTE: code small, test small. console.log() all of your functions and related stuff so you know it's working first, before you move on and make it more complicated
+
+.menu-item:hover{
+  cursor: 
+  transform: 
+}
+
+
+//REVIEW - look at ALL the sandwiches, and FIND the one sandwich => where it's name == 'caprese'
+
+^^
+let caprese = sandwiches.find(sandwich => sandwich.name == 'caprese')
+
+
+caprese.quantity++ //increases the value of our caprese sandwich quantity
+
+*********
+//NOTE: cmd + D allows you to highlight same names multiple times for replacement
+********
 
