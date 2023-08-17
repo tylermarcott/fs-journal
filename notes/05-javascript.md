@@ -175,7 +175,44 @@ title-tag -> indicate a title when a button or something else is hovered over
 
 --------
 
-Notes 8/17: SCRUM:
+Notes 8/17: Game Logic Build
 
-Biggest key feature: uses iterative and incremental practices
+//NOTE: main>section.row
 
+-->> targeting main tag all sections with the class "row"
+
+
+
+//sets function with fixed time interval that goes off every so many seconds or whatever you want to set it as
+
+***NEW FUNCTION: 
+
+setInterval(decreaseOsloHunger, 1000)   <-- NOTE: 1000 is 1 seconds, because it's in milliseconds
+
+- this is saying that decreaseOsloHunger will be called every second
+
+If we only have one line of logic, we don't always have to split it up:
+
+if(oslo.hunger <= 0) oslo.hunger = 0     <<--- this is a clamp for our setInterval method
+
+***type debugger in your code to allow you to step through your code in VScode
+
+
+can use //#region
+
+
+
+//#endregion
+
+and created blocks of code that can be collapsed 
+
+
+switch(animal.status){
+  case: ''
+}
+
+marquee tag lets our icons bounce around in there container
+
+---------
+
+*** query selector
