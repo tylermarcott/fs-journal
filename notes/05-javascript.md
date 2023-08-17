@@ -161,3 +161,21 @@ caprese.quantity++ //increases the value of our caprese sandwich quantity
 //NOTE: cmd + D allows you to highlight same names multiple times for replacement
 ********
 
+Refactoring is a very important process in our learning right now. Learning what parts of a function we can pull out to refactor and create another function, in order to simplify our code
+
+** use backticks `` to inject javascript values in a string, use ${} to injector javascript into the string
+
+***forEach loop inside function is an anonymous function itself
+
+.find function is a forEach under the hood.
+
+title-tag -> indicate a title when a button or something else is hovered over
+
+
+
+--------
+
+Notes 8/17: SCRUM:
+
+Biggest key feature: uses iterative and incremental practices
+
