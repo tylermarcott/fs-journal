@@ -216,3 +216,58 @@ marquee tag lets our icons bounce around in there container
 ---------
 
 *** query selector
+
+
+
+----
+
+Dungeon project notes:
+
+function attackBoss(){
+
+  let heroDamage = 0
+
+  heroes.forEach(hero =>{
+
+  })
+
+
+}
+
+
+----
+
+Week 2 reading notes:
+
+difference between var and let: let is block scoped
+
+* let is available to be used within a block of code (between a set of curly braces)
+* let cannot be re declared within a scope
+
+const
+
+* const cannot be updated or re-declared, unlike let and var
+* the value of a variable declared with const remains the same within the scope
+* also block scoped like let
+
+var declarations are globally scoped or function scoped while let and const are block scoped.
+
+var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared.
+
+They are all hoisted to the top of their scope but while varvariables are initialized with undefined, let and const variables are not initialized.
+
+While var and let can be declared without being initialized, const must be initialized during declaration.
+
+***Difference between parameters and arguments:***
+const arg1 = true;
+const arg2 = false;
+
+function twoParams(param1, param2) {
+ // function statements
+}
+twoParams(arg1, arg2);
+
+
+------
+
+<!-- NOTE: option + cmd + j to quick open dev tools on google! -->
