@@ -56,3 +56,25 @@ a module refers a small unit of independent, reusable code
 With ES6 modules, you can concatenate all scripts in one main script by marking some of them as exports, then other modules can import them.
 
 foundations of OOP: encapsulation and message passing
+
+
+
+---------
+
+Notes 8/22:
+
+Note: after you create your controller, we have to define our view in the router. In this case, we added GachamonsController to path ''
+
+he has this order in tabs: index -> router -> controller -> appstate -> class
+
+NOTE: when the page loads, it looks at the browser's URL and matches it with a PATH< then loads the corresponding CONTROLLERS, and injects the VIEW into the index.html router-view
+
+NOTE: controller constructors run when a view page is loaded:
+* this is something that I missed yesterday. Have to call our function that we create in our class that's in our controller
+
+
+In our service:
+
+* we export an instance of the service, instead of a definition of the class so another one cannot be created, or redefined.
+
+In this instance, we are passing the data from the click into our service call.
