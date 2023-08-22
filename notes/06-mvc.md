@@ -45,3 +45,14 @@ REVIEW: order to build in (most of the time):
 4: Add interactions to page elements
 
 5: the rest of it......
+
+
+--------
+
+NOTE: Week 3 readings notes
+
+a module refers a small unit of independent, reusable code
+
+With ES6 modules, you can concatenate all scripts in one main script by marking some of them as exports, then other modules can import them.
+
+foundations of OOP: encapsulation and message passing
