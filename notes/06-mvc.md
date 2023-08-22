@@ -78,3 +78,25 @@ In our service:
 * we export an instance of the service, instead of a definition of the class so another one cannot be created, or redefined.
 
 In this instance, we are passing the data from the click into our service call.
+
+Can put a comment that our IDE reads: /** @type (Gachamon) */
+
+activeGachamon = null
+
+It's telling us that activeGachamon is GOING to be of type Gachamon, even though it is null when it's defined
+
+Appstate.on('activeGachamon', this.drawActiveGachamon)
+
+above statement is saying listen to when activeGachamon is activated, call this.drawActiveGachamon, which will call the draw function for whatever the name of the gachamon is
+
+* part of the constructors job is to 
+* this type of statement is a listener statement, it's listening for when activeGachamon is called
+
+role="button" notifies the browser that your div or whatever is a button, even if it's not a button tag
+
+cmd + . to create a method in your service you are referencing from another file. If you are referencing something that doesn't exist, you can usually use this method.
+
+AppState.myGochamon.push(randomGochamon) <- pushing a new gochamon into our array of gochamons
+
+AppState.emit('myGachamons') <- this forces the listener for the property to the trigger
+
