@@ -100,3 +100,20 @@ AppState.myGochamon.push(randomGochamon) <- pushing a new gochamon into our arra
 
 AppState.emit('myGachamons') <- this forces the listener for the property to the trigger
 
+
+
+-------------
+
+Notes 8/23:
+
+In this current project, we use the #/about in ur router view in order to display some text.
+
+Anything inside of a class is considered a member. Anything outside that references the class makes it private
+
+* An industry standard to indicate a function is private is something like this: _drawCars()
+
+* underscore this indicated that the function is private
+
+
+When a function is declared outside of the class, we don't use the "this" syntax.
+
