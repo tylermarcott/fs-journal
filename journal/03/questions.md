@@ -13,28 +13,28 @@
 
 04. What are some of the benefits of the `Proxy` object that we are using in our structure for applications?
   
-  > | ANSWER HERE |
+  > Allow for you to provide custom functionality to basic operations that can be performed on an object. Looks like this allows for us to create some error handling in basic code?
 
 05. What the difference between a `class` and an instance of a `class`?
   
-  > | ANSWER HERE |
+  > A class has a defined set of properties. An instance of a class is just a copy of the class itself, so it's not the original.
 
 06. What is a computed Property?
   
-  > | ANSWER HERE |
+  > it allows you to put an expression in a bracket that will be used and computed as the property name.
 
 07. What is the purpose of the `MVC` pattern?
   
-  > | ANSWER HERE |
+  > To create an organized flow of data, where there is a separation between our data and what the user can see and interact with.
 
 08. What is the job of the `Controller` in the `MVC` Pattern?
   
-  > | ANSWER HERE |
+  > A controller controls the flow of data or information to the user and the DOM.
 
 09. What is the job of the `Service` in `MVC`?
   
-  > | ANSWER HERE |
+  > Service controls the flow of data to our AppState, and controls how the data is modified.
 
 10. What is the job of the `Model` in `MVC`?
   
-  > | ANSWER HERE |
+  > The model is where our templates and classes are defined.
