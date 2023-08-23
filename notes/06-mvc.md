@@ -117,3 +117,23 @@ Anything inside of a class is considered a member. Anything outside that referen
 
 When a function is declared outside of the class, we don't use the "this" syntax.
 
+in view, if you put /*html*/, it will look like HTML as far as the color structure looks (still won't be able to use intellisense)
+
+so how Sam puts the draw function on the page is by using setHTML('id', content) sort of thing. This is setting an id in our router, and calling the id and setting the template created in our controller.
+
+Our template that is pulled from are controller that is linked to our get template in our model, is being called by id in our router
+
+NOTE: got to bootstrap docs for their forms section to refer to for building forms.
+
+BS Collapse: it's basically like a button that you click that hides or unhides a form.
+
+floating labels are cool too, look into this.
+
+***NOTE NOTE::: hold shift and arrow forward or backward to highlight things with your cursor. This is super useful when being used with cmd + d to highlight multiple things to change text.***
+
+***NOTE: remember that you can drag a file next to another file in VScode so you can see them both at the same time. This is super useful for comparison fo shooooo***
+
+ignore shortcut: cmd + i while hovering on some error or squiggly to get rid of it.
+
+
+
