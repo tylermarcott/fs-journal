@@ -150,3 +150,20 @@ NOTE: I think if you for example create a function in the controller that is goi
 
 - on this popup, we label the function as async, and we put await in our if statement, so that it waits for the user to confirm before actually deleting.
 
+
+
+
+----
+
+NOTES 8/24:
+
+selectable class, changes your cursor and makes a highlight on the tag
+
+this.ComputeReportedDateView, grabbing this from a getter function, does not use the parenthesis when called, because we are just using the return value of this getter function, not actually calling the function itself
+
+get ComputeReportedDateView(){
+  return something
+}
+
+* getters are methods pretending to be properties.
+
