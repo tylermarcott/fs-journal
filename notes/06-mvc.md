@@ -135,5 +135,18 @@ floating labels are cool too, look into this.
 
 ignore shortcut: cmd + i while hovering on some error or squiggly to get rid of it.
 
+- have to add our name attributes in our html for out form in order to get our syntax that we have put in to work for submission.
 
+putting required in our input tag makes the field have to be filled out before the form can be submitted
+
+
+When you want to start using local storage, 
+
+save and load utilities are doing get and set/ parse and stringify stuff for us under the hood.
+
+NOTE: I think if you for example create a function in the controller that is going to call something in the service, but you don't have the function created yet in the service, you can cmd + click the function in controller and it will create it in your service.
+
+"Pop" in our library, it's like a popup double checking if you want to delete something
+
+- on this popup, we label the function as async, and we put await in our if statement, so that it waits for the user to confirm before actually deleting.
 
