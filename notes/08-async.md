@@ -31,3 +31,24 @@ try{
 
 A promise creates a function to pause the standard asynchronous running of code.
 
+
+APIs: Application Program Interfaces
+
+*This is how one application talks to another, an API interface in order to talk to a database
+
+When we use our API, we are going to first created a controller, service and model for the API. For example: monster
+
+* NOTE: can cmd + click on a function call to take you to the location of the function
+
+HTTP.cat to learn about web response codes: https://http.cat/
+
+BS has a class just called card, which makes your tag look like a card
+
+g-1: gap 1, gap between stuff idk lol
+
+
+need the axios script to use axios
+
+script:axios
+
+* one of the shortcuts with axios is it allows us to pull JSON text and it automatically converts it for us.
