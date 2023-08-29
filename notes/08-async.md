@@ -74,3 +74,28 @@ the @type import notes just give us more intellisense on our code.
 
 note: use elevation to elevate card from page!!!!!!!!
 
+go to 'collapse' in BS to get a collapsible form/item
+
+api post: this is kind of like a create
+
+* any time we do a post request, we will be supplying some kind of body. The body is what we are trying to insert into the API
+
+* post needs 2 arguments: an endpoint, and a data body
+
+
+NOTE: make sure to be checking out the network tab for issues when using API
+
+env.js is our environment variables.
+
+* want to change the baseURL in env.js, make it the same baseURL for our sandboxApi
+
+NOTE: want to do any kind of form requests inside of a try/catch 
+
+NEW FUNCTIONALITY: static
+
+* a static exists on the class itself, as opposed to instances of the class. EG for our form in Gregslist, creating out car form as static allows it to persist.
+
+* we have to invoke static functions, as opposed to getter functions which are automatically invoked
+
+NOTE: if you click on a line and copy, it will copy the whole line even though it's not highlighted.
+
