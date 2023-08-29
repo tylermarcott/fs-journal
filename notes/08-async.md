@@ -99,3 +99,17 @@ NEW FUNCTIONALITY: static
 
 NOTE: if you click on a line and copy, it will copy the whole line even though it's not highlighted.
 
+our edits will look extremely similar to our creates
+
+***put request***
+
+* const res = await api.put('api/cars')
+
+res shorthand = response
+
+findIndex() function finds index of an item in an array
+
+crud: create read update delete
+
+splice takes the old and replaces it with the new
+
