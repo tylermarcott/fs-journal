@@ -52,3 +52,25 @@ need the axios script to use axios
 script:axios
 
 * one of the shortcuts with axios is it allows us to pull JSON text and it automatically converts it for us.
+
+
+
+
+-----------
+
+NOTES AUG 29TH:
+
+NOTE: can right click on arrow in our inspect element console log for our api data to copy an are. We can then paste one into our model to refer to when we are creating our model.
+
+can take the data from our api and adapt it into something else, like so: this.creatorName = data.creator.name <---- this grabs the name of the creator, out of the creator object in our api data
+
+* this is referred to as flattening out a data object. We are 'adapting' the data object properties into our own property on our class
+
+***remember, we use map() to create new instances of our model class for each of the objects in the data object that we pass from the api.***
+
+* passing the data objects from the API through our car class
+
+the @type import notes just give us more intellisense on our code.
+
+note: use elevation to elevate card from page!!!!!!!!
+
