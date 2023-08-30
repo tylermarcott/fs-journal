@@ -113,3 +113,34 @@ crud: create read update delete
 
 splice takes the old and replaces it with the new
 
+NOTE: NOTE::::: cmd + . when at the end of a function call that you are calling in a different file, where the function isn't created yet. This will bring up options to automatically create the function.
+
+
+
+-----------
+
+NOTES: WED AUG 30TH:
+
+can use scss to overload/ modify bootstrap to make your own colors in bootstrap
+
+once you change some stuff in BS, have to run 'NPM RUN SASS' in terminal
+
+* if it errors, try 'npm i' 
+
+new method type:
+
+static SpellListTemplate(spell)
+
+NOTE: static exists on the definition of the class, not an instance
+
+Mick creates a new controller and a new service in order to interact with the sandbox.
+
+have to specify an endpoint as well as a set of data in our api.post request to post data to the api
+
+* make sure you have a payload in your network tab when posting to the api
+
+***NOTE: NOTE: can use mouse scroll to navigate through tabs when you have a ton of files open on VS code.***
+
+for map, res.data.map(spell => new Spell(spell)) ----> all this is doing is taking the data from res.data, aliasing it out as spell inside the parenthesis, and injecting/ mapping each res.data (spell) into a new Spell class instance
+
+pokemon?limit=20 <---- in the pokemon api, can limit the amount of pokemon you take in to your app.
