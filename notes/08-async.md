@@ -144,3 +144,38 @@ have to specify an endpoint as well as a set of data in our api.post request to 
 for map, res.data.map(spell => new Spell(spell)) ----> all this is doing is taking the data from res.data, aliasing it out as spell inside the parenthesis, and injecting/ mapping each res.data (spell) into a new Spell class instance
 
 pokemon?limit=20 <---- in the pokemon api, can limit the amount of pokemon you take in to your app.
+
+
+
+----------
+
+
+
+
+Notes 8/31:
+
+the first value of a query always start with a question mark, followed with a parameter
+
+separate parameters with &
+
+ex: ?api_key=DEMO_KEY&date=2013-12-13
+
+* need to make sure to append the api key when pulling an api that needs one. What Sam does is include the key in her baseURL so it's always used and we don't have to worry about it.
+
+* even better, we set params in our axios.create. The params will correctly format a parameter and a query.
+
+
+ed: params{
+
+  'api_key': '83149ruefew983412394j234'
+
+}
+
+Difference before and after inserting API data into our model. It slims it down to just the data that we want
+
+Be proactive, put your auth codes for the sandbox in your env file so we can get rid of the auth card in index
+
+NOTE: we put the id on the tag that we want to draw INTO.
+
+NOTE: remember to cmd + click on a function call that's in a different file to navigate there.
+
