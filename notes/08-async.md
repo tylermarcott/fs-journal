@@ -179,3 +179,35 @@ NOTE: we put the id on the tag that we want to draw INTO.
 
 NOTE: remember to cmd + click on a function call that's in a different file to navigate there.
 
+For off canvases and modals, it does not matter where in the HTMl we place them.
+
+***NOTE: what Sam does, is she draws out her whole page in index, instead of in router. Then, once the project is done, she put the html in a view, and puts the view in the route. This seems like a much easier way to do it than going back and forth between the index and the router and copy pasting, it started to get super messy***
+
+
+
+--------------
+
+8/31 Fireside Notes:
+
+- first step needs to verify login on sandbox
+
+cmd + p to navigate/ search in my project
+
+cmd + click to navigate to different stuff as well
+
+can also create a new file, for example going from controller, calling service when the file isn't even created yet. This will create  the file for you.
+
+How Jake is doing this flow, he grabs the pokemon api, then he immediately grabs the sandbox api as well.
+
+
+
+Appstate.on('account', this.getMyPokemons)
+
+* we don't use a () on getmyPokemons because we don't want the function to run immediately. If getMyPokemons(), it will run immediately. getMyPokemons will wait to be called until it runs.
+
+
+
+Note: have to wait until account is logged in in order to access sandboxapi.
+
+
+
