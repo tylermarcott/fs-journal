@@ -64,3 +64,25 @@ mongoose is a way for project to talk to the document based database (Mongo)
 
 find() in mongoose land returns everything, where as in JS it just returns one thing. A little bit of confusing syntax lol.
 
+
+http://localhost:3000/api/cats
+
+
+
+--------
+
+
+NOTES WED 9/6:
+
+Lucid charts: good for building UML diagrams
+
+
+start first thing by adding connection string in .env file
+
+Make sure to register you schema in DbContext.js
+
+In Postman, new collection, can create individual gets or puts or whatever you want tha act as like shortcuts to performing each of the tasks.
+
+to post an object, select body, raw, JSON, then create your object with the following syntax: "name": "Rainforest Cabana"
+
+
