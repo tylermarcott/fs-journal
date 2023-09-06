@@ -142,4 +142,8 @@ RESTful apis are just a best practice for naming conventions for an api
 
 start with galaxy first in the lab!
 
+//NOTE: make sure to comment out line 22-27 on Startup.js
+
+
+
 
