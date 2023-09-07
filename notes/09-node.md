@@ -146,4 +146,158 @@ start with galaxy first in the lab!
 
 
 
+Key value pair:
 
+when we create a query in the url,
+
+  key         value
+?planet = Water Planet
+
+can also do the following for multiple searches:
+
+?color=black&color=yellow
+
+can use embedding in schema
+
+{
+  name: "blank",
+  age: 24,
+  address: {
+    street: "blank rd.",
+    city: Compton
+  }
+}       ^^^ embedded object
+
+* in 1-to-1 relationship, embedding is preferred way to model the relationship
+
+
+1-to-many relationship:
+
+In this example, we have the blog which is 1, and comments which is many.
+
+Embedding:
+
+{
+  title: "An awesome blog",
+  url: "http://awesomeblog.com",
+  text: "This is an awesome blog we have just started",
+  comments: [{
+    name: "Peter Critic",
+    created_on: ISODate("2014-01-01T10:01:22Z"),
+    comment: "Awesome blog post"
+  }, {
+    name: "John Page",
+    created_on: ISODate("2014-01-01T11:01:22Z"),
+    comment: "Not so awesome blog"
+  }]
+}
+
+* this causes issues because the document can grow too large
+* write performance issues
+
+IMPORTANT
+It’s important to note that this only matters for high write traffic and might not be a problem for smaller applications. What might not be acceptable for a high write volume application might be tolerable for an application with low write load.
+
+Linking:
+
+{
+  _id: 1,
+  title: "An awesome blog",
+  url: "http://awesomeblog.com",
+  text: "This is an awesome blog we have just started"
+}
+
+
+{
+  blog_entry_id: 1,
+  name: "Peter Critic",
+  created_on: ISODate("2014-01-01T10:01:22Z"),
+  comment: "Awesome blog post"
+}
+{
+  blog_entry_id: 1,
+  name: "John Page",
+  created_on: ISODate("2014-01-01T11:01:22Z"),
+  comment: "Not so awesome blog"
+}
+
+* benefit is additional comments will not grow, less likely that comments will run into max doc size of 16MB
+
+* downside is if lots of comments, have to read all of those comments
+
+
+
+Bucketing:
+
+The third approach is a hybrid of the two above. Basically, it tries to balance the rigidity of the embedding strategy with the flexibility of the linking strategy.
+
+{
+  _id: 1,
+  title: "An awesome blog",
+  url: "http://awesomeblog.com",
+  text: "This is an awesome blog we have just started"
+}
+
+{
+  blog_entry_id: 1,
+  page: 1,
+  count: 50,
+  comments: [{
+    name: "Peter Critic",
+    created_on: ISODate("2014-01-01T10:01:22Z"),
+    comment: "Awesome blog post"
+  }, ...]
+}
+{
+  blog_entry_id: 1,
+  page: 2,
+  count: 1,
+  comments: [{
+    name: "John Page",
+    created_on: ISODate("2014-01-01T11:01:22Z"),
+    comment: "Not so awesome blog"
+  }]
+}
+
+* The main benefit of using buckets in this case is that we can perform a single read to fetch 50 comments at a time, allowing for efficient pagination.
+
+
+
+Many-to-Many relationship:
+
+An author might have authored multiple books (1:N).
+A book might have multiple authors (1:M).
+
+
+embedding:
+
+
+{
+  _id: 1,
+  name: "Peter Standford",
+  books: [1, 2]
+}
+{
+  _id: 2,
+  name: "Georg Peterson",
+  books: [2]
+}
+
+{
+  _id: 1,
+  title: "A tale of two people",
+  categories: ["drama"],
+  authors: [1, 2]
+}
+{
+  _id: 2,
+  title: "A tale of two space ships",
+  categories: ["scifi"],
+  authors: [1]
+}
+
+
+
+
+
+TIMEBOXING: seems useful!
