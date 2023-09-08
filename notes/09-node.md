@@ -301,3 +301,161 @@ embedding:
 
 
 TIMEBOXING: seems useful!
+
+
+
+
+
+
+
+
+
+-------------
+
+Notes 9/7:
+
+once opening a mvc-express project, go to workspace and hit open workspace. This will allow you to open client and server/ run them.
+
+* in .env folder, fill out the bottom 3 tokens with the ones you got from auth0, they will be in slack.
+
+* also have to do this in env.js in our client, copy paste the same tokens for domain, audience and client id
+
+* don't forget your connection string!!!
+
+start your server, add all of this, then make sure your server runs
+
+after this, open the client and attempt to login
+
+* out of the gate we should have these 3 things in the network tab: token, userinfo and account
+
+
+Can delete the value folders in our project to make things less messy, but make sure you delete all references to those files or it will cause you issues.
+
+in our virtual, have to set jusOne: true, so we don't get an array of 1 item back, justOne will turn this item into an object for simplicity
+
+reporterId: don't want to trust ownership id from the client
+* code like you are being attacked
+* someone could misuse this ID
+
+jwt.io <--- reads tokens
+
+We have to use middleware
+* .use()
+
+^^^ we put this above our post put etc, it will run before these.
+
+* we use next to get out of .use
+
+we can make the middleware however we want, but we are going to use a provided one.
+
+.use(Auth0Provider.getAuthorizedUserInfo)
+
+^^^ this will attach the users token to the submitted data.
+
+go to token --> preview, copy the access token. In postman, there is an auth tag, you can paste your bearer token in here. If in a collection, you can go to auth in the collection itself and put in the bearer token.
+
+* postman will be acting on the behalf of the single user that is logged in. If you want postman to act as a different user, we will have to move the tokens around.
+
+this attaches the user info to the request.
+
+if we put our middleware for our authprovider below our get, it will allow the content to be displayed as an example before the user is actually logged in, in order to potentially attract new users!
+
+can set postman get request to inherit auth or no auth.
+
+in bird get, you can change the path variables. Ex, put the birds id in the path and keep birdId in the url instead? kind of the same thing as just changing the bird id lol.
+
+NOTE: syntax in our populate .populate('-email') <--- this takes the email out of the data so other users can't see it.
+
+
+we want to make sure we have a check that checks if the user making the request is the same as the birdwatchers account id who created the watched bird.
+* do this in an if statement, put a throw new Forbidden() so it pops a 403 unauthorized.
+
+
+
+
+create a .env file on our server, and add all the info that goes for the project
+
+
+npm i
+
+^^^ run this in your server to install dependencies
+
+a good first step is to login with your project and see if everything works, check network tab and make sure you are getting 200s
+
+Jeremy copied an object when we did a console log to display the objects pulled from our server. He then used this object to create our model.
+
+pojo = plain old javascript object
+
+
+
+***NOTE: click on line and cmd + x to delete whole line***
+
+when in doubt on what you have to put for a url in your front end, check your urls in postman!
+
+
+
+
+----------
+
+AJ Presentation notes:
+
+
+notes on animations:
+
+animation: fadeIn 2s ease-in-out 2s forwards;
+
+opacity: 0;
+
+
+when creating an animation, have to use: 
+
+@keyframes nameOfAnimationHere{
+0%{
+  opacity: 0;
+}
+100%{
+  opacity: 1;
+  pointer-events: none;   <--- makes the button unclickable after it dissapears
+}
+
+}
+
+
+
+.animate{
+  animation: slideIn 1s ease-in-out 1s forwards;
+}
+
+@keyframes slideIn{
+  0%{
+    transform: tanslateX(-100%)  <--- pulls the button from the left side of the screen. 100% wil make it from the right side
+  }
+  100%{
+    transform: translateX(0)
+  }
+}
+
+
+overflow-x: hidden;   <--- has to be on the parent, be careful using this, but it will take away side scroll in some situations.
+
+^^^^
+prevents overflow on x axis
+
+
+
+
+background-repeat: no-repeat; <-- makes it so you don't get a bunch of boxes of images if the image is smaller on the background image you are setting
+
+
+filter: blur(1em)   <--- blurs an object, don't need to make it too huge.
+
+perspective skews the perspective of the element you are using
+
+animatebackgrounds.me   <----
+
+^^^^ when you're on this site, there's a bunch of free animation backgrounds. If you want to see how an animation is working, use dev tools inspect element and find what's doing something that you want.
+
+
+
+if you start typing out animation and type ani, it will give you sort of a preset on how to set up stuff with animations.
+

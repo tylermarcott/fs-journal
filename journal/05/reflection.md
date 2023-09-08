@@ -11,16 +11,3 @@ This reflection is open-format, so it can be whatever you like. Take this opport
 
 
 
-
--------------
-
-Notes 9/7:
-
-once opening a mvc-express project, go to workspace and hit open workspace. This will allow you to open client and server/ run them.
-
-* in .env folder, fill out the bottom 3 tokens with the ones you got from auth0, they will be in slack.
-
-* also have to do this in env.js in our client, copy paste the same tokens for domain, audience and client id
-
-* don't forget your connection string!!!
-
