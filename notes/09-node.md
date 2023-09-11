@@ -459,3 +459,6 @@ animatebackgrounds.me   <----
 
 if you start typing out animation and type ani, it will give you sort of a preset on how to set up stuff with animations.
 
+
+
+NOTE: have to run npm i when you clone down a project or it will give you an issue with your .env
