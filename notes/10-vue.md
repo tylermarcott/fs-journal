@@ -102,3 +102,64 @@ fork vue-playground
 run npm i
 
 
+
+
+----------------------
+
+
+Notes Sep 12th:
+
+VUE Lifecycle hooks:
+
+* onMounted() // when component is 'mounted' to the DOM
+* onUpdated() // when component data is updated
+* onUnmounted()  // when component is 'unmounted' from the DOM (removed)
+
+^^^ can run specific functions at specific times by triggering these
+
+if you need your code to run your function, have it outside your return. If you need the USER to run it, it has to be INSIDE the return
+
+* this can also be both. You can define a function outside the return and add the definition inside the return
+
+
+use a colon in our reactive appstate instead of an =
+
+* movies : []
+
+REVIEW: something has to be an array to use map method.
+
+
+remember: {{ }} <----- interpolate data into html
+
+
+
+NOTE: binding data inside tags uses :     binding tags in BETWEEN tags uses {{ }}
+
+
+calling our tag template with whatever the vue file name is called
+
+props: {movie: {type: Movie, required: true}} // this sets up component to take IN data from a parent component
+
+        ^name   ^type
+
+
+<MovieCard :movie="m">
+
+
+bs5-modal-default <--- quick snippets for modal
+
+
+data.genres?.map(g => g.name)   <---- if there is a genre that is defined, map it. Prevents undefined objects from being mapped.
+
+.prevent works the same as event.preventDefault()
+
+two way data binding: code changes page, and page can change code
+
+
+
+
+
+
+
+
+
