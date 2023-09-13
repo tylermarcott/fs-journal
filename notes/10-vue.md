@@ -157,9 +157,9 @@ two way data binding: code changes page, and page can change code
 
 
 
+NOTE: overflow-y: scroll   <-- makes it so overflow scrolls instead of making the page larger, say if it's on a card or something
 
 
 
 
-
-
+chek Sam's example for pagination on changing pages for checkpoint
