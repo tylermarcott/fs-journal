@@ -162,4 +162,4 @@ NOTE: overflow-y: scroll   <-- makes it so overflow scrolls instead of making th
 
 
 
-chek Sam's example for pagination on changing pages for checkpoint
+check Sam's example for pagination on changing pages for checkpoint
