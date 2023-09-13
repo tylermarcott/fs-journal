@@ -163,3 +163,79 @@ NOTE: overflow-y: scroll   <-- makes it so overflow scrolls instead of making th
 
 
 check Sam's example for pagination on changing pages for checkpoint
+
+
+
+
+
+--------
+
+
+Notes 9/13:
+
+we have components that are in a different folder and we call them pages, that's all it is.
+
+
+to: home and to: about match the page ids, takes us to the given pages
+
+router.push({name: 'Cars'}) <---- takes us to a new page, through the code itself. This is good for automatically navigating the user when certain code process are done
+
+<router-link>  <--- should be used whenever clicking something should take you to a new page
+
+
+^^ generally, you should work with router links
+
+
+Note: remember, we can always start with a data dump on the page just to test if our get is working how it should.
+
+***Remember, you can refer to Savannah's example she wrote out for you in your homepage I believe, in the gift view lab**
+
+need your prop to pass data from the page to each individual component
+
+* make sure to give your component tag an id <--- have to data bind this: eg
+
+<CarCard :car="car"/>   <--- giving data for each iteration of the for loop
+
+
+
+overflow: hidden; <---- cheating
+
+g-3 <--- gap 3  <--- adds margin and padding to the columns, only works if your content is in a car in a box, creates more equal spacing between items
+
+ putting router link around our whole card
+
+ 
+can set up route parameter in our router, such as '/cars/:carId' <--- carId is just a placeholder for whatever we type here
+
+
+can put params in router-link as well. Router links to pages with params, need the params filled out or you will get an error when the link tries to load. eg: 
+
+useRoute() <---- the route is where you are in context of the app, your url
+
+can grab the car ID out of the params in our route
+
+const route = useRoute()
+
+
+const cardId = route.params.carId <--- gives us the car Id that is in our url
+
+
+
+** if something is not in your return, it can not be accessed in your html
+
+
+
+
+for form creation in vue, use a ref set to an empty object in our setup, and v-model on all of our submissions. This will create an object that is populated with the data that is filled out in the form
+
+* const carData = ref({})   <--- this is in our setup
+
+remember push is needed to put the data back in our appstate after doing a post, so we can update the data on our local machine, not just in the api.
+
+
+
+put our await carService in a const newCar, this will capture the value of the return in the service function, which in this case will be the id of the car that is created when retrieving the car from the api. We can then use this api to know where to route the user to once the create the car, pushes the user to the details of the new car they created instead of just taking them to the bottom of the list
+
+^^^^ use a router.push
+
+make sure to clone gregslist and run npm i!
