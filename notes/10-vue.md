@@ -239,3 +239,18 @@ put our await carService in a const newCar, this will capture the value of the r
 ^^^^ use a router.push
 
 make sure to clone gregslist and run npm i!
+
+
+
+
+
+---------
+
+
+Notes 9/14:
+
+bs5-modal-default  <---- modal
+
+<slot></slot> tag <--- using these slots to insert data on a different component
+
+* 
