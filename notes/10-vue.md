@@ -253,4 +253,166 @@ bs5-modal-default  <---- modal
 
 <slot></slot> tag <--- using these slots to insert data on a different component
 
-* 
+
+
+
+
+------------
+
+FULL STACK REVIEW:
+
+postman tests
+
+USE express.vue    <---- this is what we need to use fo our checkpoint
+
+open workspace <--- go to workspace file and you will get a button
+
+We are responsible for front AND backend now, so we have to use our own ENV credentials now. Find these in slack to yourself.
+
+next, start client and server
+
+
+tests in postman
+
+
+
+lowercase: true; <--- in an enum, makes it so the string that is taken in is always lowercase.
+
+toJSON: {virtuals: true} <-- allows us to create virtuals on the given object
+
+
+
+in variables, put in you auth token <---- get this from our token in our console -->> network --> token
+
+* put it in both hit save (on auth, not evil_auth)
+
+can open console bottom left corner of postman to see errors and such
+
+
+
+***can drop down to test results to see which of the tests it passes or fails
+
+
+
+any time you use a find, have to tag on .populate() at the end.
+
+
+
+'/:something'   <----- req.params.something e.g. for findById
+
+
+soft delete: kind of like an archive, where you aren't actually deleting something, but you still have it in the DB
+
+
+runs a function from the albumService in picturesService just to verify if we have a proper album id or not.
+
+***NOTE: services can call to other services!
+
+cannot have a controller talk to another controller though.
+
+<AlbumCard :album="a"/>
+            ^^^^--- this is how we pass our props.
+
+*** remember, you can have nested css classes!!
+
+
+
+can expand our computed to make it multiple lines and put in if/ else statements
+
+bs5-modal-default
+
+
+use <slot name="body">  <--- or something similar to pass in ids so we can put unique bits of information in here
+
+
+we can open up a component and start defining what goes in the slots we created in the component
+
+<ModalWrapper>
+<template #body>      <---- we target the body slot we made in the component here to pass info to it.
+    something here
+</template>
+
+</ModalWrapper>
+
+
+****const albumData = ref({})  <---- add v-model on all form inputs, this captures the data and puts it into the ref so we can use it.
+
+option in form <---- good if you have an enum value in your data, it will allow you to choose from different values in your enum
+
+option animals
+option pugs
+options games
+
+etc etc...
+
+
+we can see in vue console our object changing as we input data into our form!
+
+
+can add imported photo preview, see syntax in Mick's code. Nice touch!
+
+
+v-if="user.isAuthenticated" <--- way to hide buttons if users are not logged in
+
+
+
+when we use const route = useRoute(), then pass route.params.albumId to a fxn, our app knows what albumId is because we specify it when we include it in our router.
+
+
+*** mapping is for arrays of things, not a single object.
+
+
+width: 100% <--- if the object is in a col-3 or something like that, it will make the width the size of the column
+aspect ratio: 1/1 <--- css styling to make an object squared
+
+
+
+masonry format <--- like grids
+
+<div class="masonry-container">
+
+remember to remove .js if you still have this on.
+
+
+$gap: 0.25 em <---- this is a variable in css
+
+collabBody.accountId = req.userInfo.id <--- grabbing id from info on .use(Auth0Provider. whatever)
+
+
+
+{accountId: userId} <-- key: value pair. comparing userId to accountId. Use case for changing userId into something a class with accountId can use
+
+
+
+foreignField is what you are looking at on the other document,
+localField is what you are looking at on the document where the virtual is being created.
+
+
+
+NOTE: in AuthService.js  <--- we want to wait accountService.getMyCollaboration()
+
+* this makes sure we wait for the user to be logged in before the collaborations are fetched. Can't use the normal way to do this because we will get a 401 error
+
+
+
+props: {album: {type: Album || Object, required: true}} <---- quick fix
+
+
+
+watchEffect instead of onMount <---- gets everything WHENEVER the route changes. We were having an issue on create wasn't taking us to the newly created album
+
+
+
+
+
+BEFORE OYU START PROJECT: in Postman: tower ---> variables ---> log in to 2 accounts and get the auth tokens from them
+
+
+^^^^ ------- for postman, go in the order of these tests. Also, don't just got and do all of the postman tests immediately. Can do some, go do some front end, and come back.
+
+
+
+
+tower event is going to work like the archive of an album, except it's a cancelled event
+
+
