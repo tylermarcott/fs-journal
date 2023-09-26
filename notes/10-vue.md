@@ -416,3 +416,28 @@ BEFORE OYU START PROJECT: in Postman: tower ---> variables ---> log in to 2 acco
 tower event is going to work like the archive of an album, except it's a cancelled event
 
 
+
+
+
+
+FINAL CHECKS FOR TOWERS CHECKPOINT:
+
+- The EventDetails page displays all event properties, the comments for that event, and images/ names of all ticket holders ✅
+
+- Comments show their authors name and image ✅
+
+- Events can have comments added and removed on the EventDetails page ✅
+
+- UI prevents users from joining an event (create ticket) if an event is canceled or does not have the available capacity remaining ✅
+
+- User can choose to 'attend' an event, creating a relationship (ticket) between user and event ✅
+
+- UI prevents user from creating multiple tickets for an event ✅
+
+- Users can see all the events they are attending (have tickets to) ✅
+
+- Users can delete their ticket for an event ✅
+
+- API passes all Postman Tests (NOTE: passed all before, have 1 that doesn't work now, go back and retest) ✅
+
+- Application UI adheres to Minimum release standards and web UI standard of the BCW design doc
