@@ -441,3 +441,14 @@ FINAL CHECKS FOR TOWERS CHECKPOINT:
 - API passes all Postman Tests (NOTE: passed all before, have 1 that doesn't work now, go back and retest) ✅
 
 - Application UI adheres to Minimum release standards and web UI standard of the BCW design doc
+
+
+
+
+
+
+
+TESTING MINI LECTURE 10/4  
+
+can create a test with pm.test()
+
