@@ -452,3 +452,230 @@ TESTING MINI LECTURE 10/4
 
 can create a test with pm.test()
 
+
+
+Vue-tour:
+
+cd into client folder
+
+npm install vue3-tour
+
+import Vue3Tour from "vue3-tour"
+import 'vue3-tour/dist/vue3-tour.css'
+
+.use(Vue3Tour)
+
+note, she is doing this in main.js (HAS to be done in main.js because the tour needs to happen when app is instantiated)
+
+
+
+<v-tour></v-tour> tag
+
+in return, :
+
+steps:[
+    {
+        head:{title:'Hey hey look at this!'},
+        content: 'Here is our super cool step component',
+        actions:{next: '<button>What does this look like?</button>'},
+    }
+],
+
+
+<v-tour name="myTour": steps="steps">
+
+
+^^^ this won't work yet, need to select an element that we want the popup to happen on.
+
+
+<section id="v-step-0">
+
+
+Add target to our steps:
+
+steps:[
+    {
+        target: '#v-step-0'
+        head:{title:'Hey hey look at this!'},
+        content: 'Here is our super cool step component',
+        actions:{next: '<button>What does this look like?</button>'},
+    }
+],
+
+
+inside script tag but outside of setup, create this:
+
+saying: when this component mounts, start my tour
+
+
+
+mounted: function(){
+    this.$tours['myTour'].start()
+}
+
+
+add params:
+
+
+steps:[
+    {
+        target: '#v-step-0'
+        head:{title:'Hey hey look at this!'},
+        content: 'Here is our super cool step component',
+        actions:{next: '<button>What does this look like?</button>'},
+        params: {placement: 'top'}
+    }
+],
+
+
+add another id, this one can be on something else:
+
+<section id="v-step-1">
+
+
+add another step:
+
+steps:[
+    {
+        target: '#v-step-0'
+        head:{title:'Hey hey look at this!'},
+        content: 'Here is our super cool step component',
+        actions:{next: '<button>What does this look like?</button>'},
+        params: {placement: 'top'}
+    },
+    {
+        target = '#v-step-1',
+        header{title: 'View an Album'},
+        content: "Click on a card to view its details"
+    }
+],
+
+
+
+add a callback right below steps:
+
+
+tourCallbacks:{
+    onFinish: (()=> {
+        router.push({name: 'Album Details', params: {albumId: Appstate.albums[0].id}})       <--- make sure this is registered router link
+    })
+}
+
+
+
+make sure to add const router = userRouter()
+
+make sure to add callbacks to our tag that is calling it I think?
+
+:callbacks="callbacks" <---  I think this goes in that section?
+
+
+add our v-tour in a new component
+
+
+<v-tour :steps="steps" :callbacks="callbacks">
+
+
+
+
+props: {
+    steps: {type: Array, required: true},
+    callbacks: {type: Object}
+}
+
+
+call under setup:
+
+mounted: function(){
+    this.$tours['myTour'].start()
+}
+
+put id="v-step-2"  on whatever tag you want it to appear at.
+
+so basically you can just keep adding steps, as many as you want
+
+
+make sure to pass props on tour tag.
+
+
+We don't want our tours to happen every single time, so we are going to fix this.
+Going to add a boolean on account model something like needsTour
+
+needsTour: {type: Boolean, default: true} <--- server side
+
+already have a method we can use in account service front end, but we have to make it in the controller
+
+
+
+updateAccount(req, res, next){
+    try{
+        const account = await accountService.updateAccount(req.userInfo, req.body)
+        return res.send(account)
+    }
+}
+
+
+
+add edit in account service in client:
+
+
+async editAccount(){
+    const res = await api.put('account', body)
+    logger.log([UPDATING ACCOUNT])
+}
+
+
+
+tourCallBacks: {
+    onFinish(()=> {
+        //NOTE: flip the bool on the account to false, send a put request to the server to update
+        await accountsService.editAccount({needsTour: false})
+    })
+}
+
+
+pass :callbacks="tourCallbacks" on our <v-tour tag
+
+<v-tour :steps="steps" :callbacks="tourCallBacks">
+
+
+
+save in appstate now. Want to say if needsTour is false, don't even render the tour
+
+this.needsTour = data.needsTour in front end model for account
+
+AppState.account = new Account(res.data) <---- add this syntax to editAccount fxn on front end
+
+
+
+add to v-tour on home page, v-if="account.needsTour" <--- only render if this is true
+
+
+compute our accounts as well so we can read from appstate
+
+add our own tour tag
+
+
+<Tour v-if="account.needsTour" etc... <--- changes the hierarchy. If we use the v-tour tag like we have above, it will not work
+
+
+
+onSkip: (async()=> {
+    await accountService.editAccount({needsTour: false})
+})
+
+^^^ this makes it so onskip, it skips the tutorial. Say if you are making a new account but don't want the tour.
+
+
+
+in sanitizeBody() function in accountsService:
+
+add needsTour: body.needsTour   <---- have to add this after body is sanitized, because if you don't do this, this function gets rid of this value.
+
+
+
+
+
+
+
+
