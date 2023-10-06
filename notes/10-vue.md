@@ -676,6 +676,38 @@ add needsTour: body.needsTour   <---- have to add this after body is sanitized, 
 
 
 
+Notes on Sockets:
+
+sockets are cool
+
+talking to each other openly and freely instead of sending one thing and getting one thing back. 
+
+A way for you and the api you are working with to send messages back and forth directly
+
+in env.js, have to set export const useSockets = true to use sockets
+
+little ws tab on networks tab in dev tools. This will show you if sockets are working.
+
+green are messages you are sending, red are messages server is sending to you. You will see these in the ws tab
+
+TesterHandler.js <--- looks like a controller on server side, handlers are set up to look for messages
+
+to send messages, use emit('') <--- inside, it is the message that socket is set up to listen to.
+
+test handler receives payload from the server and sends it back to us.
+
+the example we are given, 2 instances of our app are open. One user creates an album, another use automatically has the album populated on their list of albums.
+
+messageRoom allows you to specify a room that things go out to. Users have to be in a room together for both of them to get the same thing.
+
+
+enqueuing action message means the socket handler is holding messages until user is first authorized.
+
+
+
+
+
+
 
 
 
