@@ -256,3 +256,114 @@ can add a singleton in Startup instead of a scoped, which will solve the problem
 
 
 
+
+
+
+-------------
+
+NOTES ON MYSQL
+
+
+use SELECT to choose different types of data from a table, such as name and description of a hotdog on hotdog table
+
+ex: SELECT name, price FROM hotdogs WHERE 'hasKetchup' = true AND price < 6;
+
+^^ this is saying exactly what it sounds like from our hotdog table, SQL is kind of nice because it kind of speaks in plain english
+
+//NOTE: general practice is that any syntax that is brought in from SQL is CAPITALIZED, and anything we bring in is lowercase. See example above.
+
+SELECT name, price FROM hotdogs WHERE description LIKE '%jalapeno%'; <--- percent signs are wildcard characters, means anything can come after it and anything can come before it.
+   example: 'that is a spicy jalapeno yo' would still grab jalapeno, even though it is between other words.
+
+
+SELECT name, price FROM hotdogs WHERE name LIKE '%mustard%' OR description LIKE '%mustard%';
+
+SELECT name, price FROM hotdogs ORDER BY name;
+
+SELECT name, price FROM hotdogs LIMIT 2 OFFSET 1; <--- gets limits to 2 items, skips the first position in the table.
+
+order DOES matter in the way you put these. If you mix up the order, it will usually give us an error when we execute
+
+
+go to MySQLTutorial.org for tips and tricks, especially if you need help with errors. Also gives you places to practice.
+
+
+
+set up id in the following way in a CREATE TABLE
+
+id INT AUTO_INCREMENT PRIMARY KEY,    <---- primary key will make it so our hotdogs are organized by this id
+        ^^^^^ ---- auto increment makes it so an id is added to every hotdog that we create.
+
+
+DELETE FROM hotdogs WHERE id = 1;
+
+UPDATE hotdogs
+SET price = 20
+WHERE id = 1;
+
+
+
+UPDATE hotdogs
+set price = price /2
+WHERE price > 5;
+
+----------------------
+
+***MYSQL info:
+
+database: first-database-ever
+
+credentials:
+
+  username: sgroot
+
+  password: NOBCayPeC+E06HYv
+
+master endpoint: SG-Sandbox-7900-mysql-master.servers.mongodirector.com
+
+***
+
+-----------------------
+
+go to appsettings.development, fill out connection string so our app can connect to the database.
+
+^^^^^ Mick will slack this out to us to fill in, just change what he gives to us with the stuff above from your actual db.
+
+
+
+//NOTE: shortcut to making a c# class. Right click on folder, click new C# class 
+
+^^^^^ this can be done with controllers and a bunch of other stuff as well, we come with a bunch of pre-populated code.
+
+
+new --->>> class --->>> CarsService
+
+REMEMBER TO ADD DEPENDENCIES IN Startup.cs
+
+
+in repository, write a string with SQL inside
+
+string sql = @"
+
+
+
+";
+
+
+^^^^^ this syntax allows for us to have multiple lines in our string.
+
+
+
+//NOTE: we can really just copy paste stuff from our db setup into our C# repo. If it works in the setup, it should work in the C# as well. This would be in our string sql
+
+
+RIP GOBLIN-THRASHER
+
+original.ImgUrl = updateData.ImgUrl ? updateData.ImgUrl : original.ImgUrl;
+
+original.ImgUrl = updateData.ImgUrl ?? original.ImgUrl;
+
+                                    ^----- null coalescence operator, does the same as a ternary, takes the non null
+
+
+
