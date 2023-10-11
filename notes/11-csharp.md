@@ -367,3 +367,72 @@ original.ImgUrl = updateData.ImgUrl ?? original.ImgUrl;
 
 
 
+
+
+-------------
+
+Doing Post-it now in C#:
+
+appsettings.Development.json
+
+^^^ this is our new version of .env
+
+still have to fill out env.js in front end
+
+//NOTE: make sure to change base URL to the correct port on env.js, should be an https://7045 something
+
+if you want something to default to tree, put DEFAULT 0 <-- 0 being false
+
+
+creatorId VARCHAR(255) NOT NULL
+FOREIGN KEY (creatorId) REFERENCES accounts(id) <---- signifies this value is going to come from another table
+
+//NOTE: when you see an error that says 'near', typically look at the line before it.
+
+
+
+since we provide a default in our table, we don't need to include archived in our 'insert into' command
+
+
+
+ON DELETE CASCADE  <---- in this case, if my account gets deleted, cascade that down to the next table
+
+SELECT * FROM albums JOIN accounts; <---- selects everything from albums table and joins it to accounts table
+
+
+SELECT * FROM albums;
+SELECT * FROM albums JOIN accounts;
+
+
+
+SELECT* FROM albums alb JOIN account act ON act.id = alb.creatorId;
+                    ^^^ this is just aliasing out albums to alb, so we can perform the syntax above to make things a little more clear. Need to do this as syntax gets a little more complicated
+
+
+* to create model:
+ - can user the prop snippet to populate for c#!SECTION
+
+
+  //NOTE: works backwards in C#: model ---> repository ------> service -----> controller
+
+
+in repo, hover over _db and cmd + . to generate constructor, little shortcut. This works on any file actually lol
+
+
+can add an instance of another model onto a model.
+
+ex: on our Album model, can have a data type of type Account. This replaces virtuals lol
+
+
+List<Album albums = _db.Query<Album, Account, album>(sql).ToList()
+
+
+whenever we use async in C#, we must accompany it with 'task'
+
+
+
+add [Authorize] above your [Http] thingy, says you must be authorized before making this request.
+
+
+
+
