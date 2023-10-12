@@ -435,4 +435,21 @@ add [Authorize] above your [Http] thingy, says you must be authorized before mak
 
 
 
+----------------------------------------------
+
+
+NOTES OCT 12:
+
+
+make sure to check out postman endpoints and use them your road map for where your CRUD route needs to go
+
+services can talk to other services, but a service should never talk to a different kind of repository. Ex: picture service talking to album repo.
+
+
+we have view models, which still point to where we need to go for many-to-many relationships.
+
+
+WHERE collab.accountId = @accountId
+                            ^^^^^ this is being pulled from the parameter.
+
 
