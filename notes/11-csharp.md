@@ -453,3 +453,15 @@ WHERE collab.accountId = @accountId
                             ^^^^^ this is being pulled from the parameter.
 
 
+
+
+Unable to copy file "obj/Debug/net6.0/AllspiceCheckpoint.pdb" to "bin/Debug/net6.0/AllspiceCheckpoint.pdb". The process cannot access the file '/Users/tylermarcott/source/codeworks/AllspiceCheckpoint/AllspiceCheckpoint/bin/Debug/net6.0/AllspiceCheckpoint.pdb' because it is being used by another process. [/Users/tylermarcott/source/codeworks/AllspiceCheckpoint/AllspiceCheckpoint/AllspiceCheckpoint.csproj]
+
+
+^^^^ if having issues, in terminal type: killall dotnet
+
+***NOTE: make sure to change variables to the right thing, endpoint and add auth variables
+
+***NOTE: delete toString() syntax in test/ prerequest script if you are having the following issue in postman:
+
+TypeError: Cannot read properties of undefined (reading 'toString')
