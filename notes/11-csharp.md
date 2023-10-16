@@ -465,3 +465,48 @@ Unable to copy file "obj/Debug/net6.0/AllspiceCheckpoint.pdb" to "bin/Debug/net6
 ***NOTE: delete toString() syntax in test/ prerequest script if you are having the following issue in postman:
 
 TypeError: Cannot read properties of undefined (reading 'toString')
+
+
+
+
+
+
+
+-----------------------------------------------
+
+NOTES 10/16:
+
+instaCult
+
+can change the class creation template so that it has a semi-colon after the namespace instead of the curly brackets, look up how to do this*********
+
+
+NOTE: can use add parameter on readonly by right clicking, try to start using this!
+
+MAKE SURE TO ADD YOUR SCOPES!!!!
+
+public class Account : RepoItem<Tid>   <---- Tid allows us to take in the specific data type when we run into the problem of using this extended model on multiple other models, where one might have a string of type VARCHAR, and another might have type INT
+
+Can extend models to hide certain things on a model, see example.
+
+
+Error: Object reference not set to an isntance of an object <--- something was null but you drilled into it and treated it like an object
+
+
+have to use userInfo?.Id  <---- this compensates for if it's null, won't give us an error
+
+
+
+route middleware in router.js in client <---- beforeEnter: authGuard
+ * this will create an issue, blocks non logged in users from accessing the page, will prompt them to log in first thing
+
+^^^^^ another thing to use: authSettled <---- waits for the automatic login process before entering.
+
+If getting errors from using this, just wait like 30-60sec if you refresh a ton or something lol.
+
+
+
+forms review:
+
+
+
