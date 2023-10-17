@@ -510,3 +510,34 @@ forms review:
 
 
 
+NOTES 10/17:
+
+Making additional class extensions on Account, allows us to relate to accounts, but only get specific types of data, instead of getting ALL of the data from accounts back when you join an account to another model.
+
+ex:
+
+cultist extends profile. These are EXTENSIONS of a model.
+
+public class Cultist: Profile{
+  public int CultMemberId {get; set;} <---- this is an item that is added so we can add the cult member id in our repo.
+  public int CultId {get; set;}
+}
+
+
+NOTE: could potentially have a dependency injection issue, just go an mess with the order of the scopes in startup. Kind of vague but Mick says that this is the solution.
+
+
+
+when we want to send the cultId, we have to send it as an object. If we don't, we will get the error like 'unsupported media type'. The server doesn't know what a single number like '5' is
+
+const cultMember = {cultId: route.params.cultId} <---- this gives is a key value so it knows what it's looking at.
+
+NOTE: better to use user when it's something that can use both user and account to check same information. User is slightly quicker when loading page though.
+
+
+
+
+
+
+
+
