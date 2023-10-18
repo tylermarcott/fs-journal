@@ -538,6 +538,56 @@ NOTE: better to use user when it's something that can use both user and account 
 
 
 
+NOTES 10/18:
+
+interfaces: what we refer to as a contract, where we can define what we want a class to have
+
+IRepository.cs
+
+                              ⬇️ T is instance of whatever type we define
+public interface IRepository<T, Tid>;
+{
+  List<T> Get();
+
+  T GetById(Tid id);
+
+  T Create(T newData);
+
+  public int Update(T updateData);  <--- int for how many rows we are updating
+
+  public int Delete(Tid id);
+}
+
+                                                                                  ⬇️ here we define T and Tid from interface
+now, in one of our repos, we type: public class RestaurantRepository : IRepository<Restaurant, int>
+
+now, command period use interface command, and it populates all the CRUD method methods in your repo.
+
+we will break this interface if we take away one of the methods in our repository, but we can add as many additional functions as we want without breaking the contract. <------ this is just used to streamline creating our backend.
+
+*** interfaces should never be responsible for actually instantiating things, so EG we can't put private readonly IDbConnection _db; into our interface
+
+
+NOTE: when typing our IDbConnection readonly, cmd . and say create constructor as a little shortcut
+
+
+
+SHORTCUT: return _repo.Create(restaurantData); <---- easier than doing the 2 line way lol.
+
+
+
+original.Name = updateData.Name ?? original.Name;
+
+^^^ this means set original.Name to updateData.Name. If that doesn't work, set original.Name to original.Name
+get or another method firing off before accounts
+
+NOTE; beforeEnter: authSettled <--- this goes in the router, see Sam's notes on how to do it. This will solve issue with 
+
+
+
+
+
+
 
 
 
