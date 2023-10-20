@@ -587,7 +587,32 @@ NOTE; beforeEnter: authSettled <--- this goes in the router, see Sam's notes on 
 
 
 
+NOTES 10/19:  
 
+
+kits cats and mats
+
+
+
+
+SELECT 
+*
+FROM reports
+
+^^^ this means select all INFORMATION from reports
+
+NOTE: we can take our sql syntax in our repo and try to run it in our dbSetup, in order to debug *****
+
+^^^ might have to change a few things when doing this debug, such as changing the @parameter
+
+
+LEFT JOIN <--- take this table and join another table onto it. Instead of JOIN, it is 'join 2 tables onto each other'
+
+restaurants.*,
+COUNT (reports.id) AS reportCount,
+accounts.*
+
+^^^ if we put the count AFTER accounts, the count as reportCount will be added to the accounts table instead of the restaurant table.
 
 
 
