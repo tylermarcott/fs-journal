@@ -1,0 +1,172 @@
+Notes Oct 30th:
+
+openvpn <--- Jake says this is a good vpn
+
+vpn = virtual private network
+
+IP = internet provider 
+
+DNS = domain name services
+
+EC2 box in your AWS page, search it and favorite it.
+
+Apparently Oregon is a little bit faster than N CA, maybe select this
+
+Make sure you don't screw up on this: make sure whatever AMI you choose, make sure there is a FREE TIER you can choose. Jake said he likes to us ubuntu
+
+this goes the same with any other selection: make sure it is free tier
+
+you get 750hrs free per month, this is enough for one instance to run free 24/7 every month. If you create ANOTHER free tier, it is not free even if you have free tier selected.
+
+*** worth it to keep your portfolio live.
+
+click create new key-pair
+
+if you are going to store credit card info, make sure to lock your box down pretty good in network settings on AWS
+
+security group name: 'default open everything' or something like this for a default security name
+
+MYSQL/ Aurora <---- Type on Security rule
+
+GUI <--- graphical user interface
+
+^^ on our server we spin up, we won't have a GUI, which is the mouse and such, so we will manipulate the server through the command line
+
+want to install software on the ubuntu machine, like mySQL, node etc.
+
+set up mySQL server so we can make our projects work.
+
+
+apt <--- your downloader for downloading things on the machine
+
+MySQL server is NOT  a database. A MySQL server is a server that has a ton of databases ON it
+
+
+
+
+sudo systemctl status mysql
+
+
+
+
+^^^^ command to check if the server is running
+
+
+
+sudo <---- super user do <--- permission based thing, admin command sort of deal. If you are getting permissions issues, you can run the below code, it will rerun your previous command but with super user do.
+
+
+
+sudo !!
+
+
+
+**there are bots constantly scraping ip addresses for vulnerabilities
+
+
+
+if you see--->  .d <--- damien is the service that actually runs the think that you are doing
+
+
+
+nano <--- default text editor on ubuntu
+
+^ this carrot means control on your keyboard. so ^G is just control G
+
+control + c to get out of status check
+
+host address on connect to server in VScode is going to be public id address in AWS
+
+
+*********for keepr, make some REAL keeps, which will be good for a demo.
+
+
+make sure to plug in your connection string that will be slacked to us. This will be 
+
+
+
+
+
+
+
+NOTES 10/31:
+
+github actions
+
+YAML <--- whitespace sensitive language
+
+
+
+
+version: '3'
+services:
+  app:
+    image: your-dockerhub-username/repo-name:latest
+    ports:
+      - "3000:3000"
+          ^^^^ I want my internal port 3000 matched to my external port 3000
+
+
+
+create new top-level folder called: .github\workflows <---- or maybe the 2 files need to be workflows..?
+yah... file... workflows
+
+add 2 files called build.yml and deploy.yml
+
+
+
+
+
+sudo snap install docker
+
+NOTE:
+
+do step 3 today instead of step 2.
+
+
+use sudo cat when getting pem key cert
+
+
+
+notes 11/1:
+
+cloudflare: come to cloud flare, buy your domain through cloudflare, have them handle your dns
+
+when you create your name, add a type A record, which takes an IP address 
+
+name will be @, ip address will be your ip address
+
+under ssl:
+
+full (strict) encryption mode makes it so you have to install a private key on your origin server, so you are the ONLY one that can read it
+
+have to install origin certificate
+
+origin server -> create certificate
+
+edit nginx, plug in stuff that is in outline
+
+change domain name to your domain name you created on cloudeflare
+
+we are going to cd to the locations of the certificate and key and copy paste the cert and key from cloudflare into these text areas designated in the nginx settings.
+
+in auth0 settings, go to applications, applications, allowed logout URLS, copy paste your url from your page in various spots lol
+
+
+
+.net projects like keepr:
+
+change sdk:7.0 to 6.0, that is the version of .net that we have been using
+
+sudo docker ps   <--- shows all your running containers on your server
+
+
+
+
+to push, make a new pull request, then set to production on the dragdown
+
+do a sudo nano, and add route prefix in order to get node AND .net projects working at the same time
+
+
+
+NOTES: still can't deploy, go to the build Jake says, and find the other secrets that we need to add into our repo. This is the reason the docker deployment is failing.

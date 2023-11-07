@@ -1,0 +1,58 @@
+Notes on General Cloud computing:
+
+Virtualization: allows the possibility have having multiple virtual machines, each running essentially a separate operating system and applications, installed by 1 physical server
+
+	- shared hardware is achieved through a hypervisor, which is a piece of software
+	used to create the virtualized environment, allowing for multiple VMs to be installed
+	on the same host
+
+		-any request to the hardware goes via the hypervisor
+
+A VM is sometimes referred to an instance (aka our AWS instance we use at bcw)
+
+
+COMPUTE objects provide the brains to process your workload
+
+STORAGE resources allow you to save and store your data
+
+DATABASE resources alow you store structured sets of data by your application
+
+NETWORK resources provide the connectivity allowing all other resources to communicate with each other
+
+3 different cloud deployment models: Public, Private and Hybrid
+
+Hybrid is used for burst heavy traffic sort of stuff
+
+
+
+
+IaaS - infrastructure as a service
+
+PaaS - platform as a service
+
+SaaS - Software as a service
+
+
+
+Key Cloud Concepts:
+
+  On Demand Resourcing
+    - when you want to provision a resource within the Cloud, it's almost immediately available to you to allocate where and when you need it
+
+  Scalability
+    - cloud computing offers you the ability to rapidly scale your environment's resources both up and down, and in and out
+
+      - scaling up and down is altering the power or performance of an instance, maybe upgrading to one with greater CPU or memory
+      - scaling in and out adds or removes the number of instances you're using to your fleet of compute resources
+
+  Economy of Scale
+    - the huge scale of resources public cloud offerings provide offers exceptionally low resource costs compared to traditional hosting
+
+  Flexibility and elasticity
+    - you can choose the amount of resources you require, how much and how long you want it, and on what scale
+
+  Growth
+    - cloud computing offers organization the ability to grow
+
+  Utility based metering
+    - with many cloud services, you only pay for what you use.
